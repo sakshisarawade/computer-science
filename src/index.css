@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", "Arial", sans-serif;
+
+  --color-heritage-ivory: #FAF9F6;
+  --color-heritage-sandstone: #D2B48C;
+  --color-heritage-beige: #F5F5DC;
+  --color-heritage-gold: #C5A059;
+  --color-heritage-terracotta: #B35C44;
+  --color-heritage-ink: #2D2926;
+  --color-stone-border: #E0D7C6;
+}
+
+@layer base {
+  body {
+    @apply bg-heritage-ivory text-heritage-ink font-sans antialiased;
+    background-image: radial-gradient(#F5F5DC 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.heritage-card {
+  @apply bg-white border border-stone-border rounded-2xl shadow-sm;
+}
+
+.heritage-button {
+  @apply px-8 py-3 bg-heritage-terracotta text-white rounded-lg font-bold uppercase tracking-wider text-xs transition-all hover:opacity-90 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.heritage-input {
+  @apply w-full px-4 py-2 bg-white border border-stone-border rounded-full text-xs focus:outline-none focus:ring-1 focus:ring-heritage-gold transition-all;
+}
+
+.section-title {
+  @apply font-serif text-lg mb-4 text-heritage-terracotta border-b-2 border-heritage-gold inline-block pb-1;
+  border-bottom: 2px solid #C5A059;
+}
+
+.fact-item-label {
+  @apply text-[11px] uppercase text-heritage-sandstone font-bold;
+}
+
+.fact-item-value {
+  @apply font-serif text-base text-heritage-ink;
+}
